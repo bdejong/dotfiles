@@ -11,7 +11,8 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/Applications/Araxis Merge.app/Contents/Utilities"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/opt/go/libexec/bin:/Applications/Araxis Merge.app/Contents/Utilities"
+export GOPATH=$HOME/Documents/go
 
 . ~/.bash_prompt
 
