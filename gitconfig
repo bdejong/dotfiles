@@ -3,7 +3,7 @@
 	sslVerify = false
 [user]
 	name = Bram de Jong
-	email = bram.dejong@native-instruments.de
+	email = bram.dejong@gmail.com
 [core]
 	excludesfile = /Users/bram.dejong/.gitignore_global
 [color]
@@ -26,3 +26,7 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
