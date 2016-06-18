@@ -1,31 +1,69 @@
-[credential]
-[http]
-	sslVerify = false
 [user]
 	name = Bram de Jong
 	email = bram.dejong@gmail.com
+
 [core]
 	excludesfile = /Users/bram.dejong/.gitignore_global
+    # insanely beautiful diffs
+    pager = diff-so-fancy | less -r
+
+[alias]
+    c = commit -am
+    up = pull
+    p = push
+    s = status -s
+    sclone = clone --depth=1
+    co = checkout
+    dt = difftool
+    df = diff --color --color-words --abbrev
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    
+
+# so much color
 [color]
-	ui = true
+    ui = always
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
 [push]
-	default = simple
+	default = current
+
 [diff]
 	tool = araxis
+
 [merge]
 	tool = araxis
+
 [difftool]
 	prompt = false
-[alias]
-	dt = difftool
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+
 [credential]
 	helper = osxkeychain
+
+[help]
+    autocorrect = 1
+
 [filter "lfs"]
 	smudge = git-lfs smudge %f
 	required = true
