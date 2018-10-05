@@ -1,10 +1,13 @@
 brew install git
 brew install bash-completion
-brew install top-osx
 brew install python
-brew install the_silver_searcher
+brew install ripgrep
 brew install diff-so-fancy
 brew install liquidprompt
+brew install tig
+brew install httpie
+brew install htop
+brew install cmake
 brew cask install spectacle 
 brew cask install 1password
 brew cask install google-drive-file-stream
