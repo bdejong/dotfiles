@@ -9,7 +9,7 @@ export LC_ALL="en_US.UTF-8"
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [ -f /usr/local/share/liquidprompt ]; then
     . /usr/local/share/liquidprompt

@@ -8,6 +8,7 @@ brew install tig
 brew install httpie
 brew install htop
 brew install cmake
+brew install clang-format
 brew cask install spectacle 
 brew cask install 1password
 brew cask install google-drive-file-stream
@@ -16,5 +17,3 @@ brew cask install google-chrome
 brew cask install slack
 brew cask install the-unarchiver
 brew cask install spotify
-brew cask install qt-creator
-brew install qt
