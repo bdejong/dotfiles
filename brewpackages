@@ -18,4 +18,4 @@ brew cask install the-unarchiver
 brew cask install spotify
 brew cask install qt-creator
 # this requires xcode...
-brew install --with-examples qt
+brew install qt
