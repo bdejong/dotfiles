@@ -3,7 +3,7 @@
 	email = bram.dejong@gmail.com
 
 [core]
-	excludesfile = /Users/bram.dejong/.gitignore_global
+	excludesfile = /Users/bdejong/.gitignore_global
     # insanely beautiful diffs
     pager = diff-so-fancy | less -r
 
@@ -65,6 +65,7 @@
     autocorrect = 1
 
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
