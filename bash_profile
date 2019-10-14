@@ -9,7 +9,8 @@ export LC_ALL="en_US.UTF-8"
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/opt/go/libexec/bin"
+export GOPATH=$HOME/Documents/go
 
 if [ -f /usr/local/share/liquidprompt ]; then
     . /usr/local/share/liquidprompt
