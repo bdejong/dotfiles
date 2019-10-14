@@ -22,3 +22,5 @@ fi
 function title {
   printf "\033]0;%s\007" "$1"
 }
+
+alias python=/usr/local/bin/python3
