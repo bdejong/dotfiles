@@ -24,9 +24,21 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="➔ "
 
 POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=60
 
-  if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-    autoload -Uz compinit
-    compinit
+  autoload -Uz compinit
+  compinit
+fi
+
+function cd() {
+  if [[ -d ./.env ]] ; then
+    deactivate
   fi
+
+  builtin cd $1
+
+  if [[ -d ./.env ]] ; then
+    . ./.env/bin/activate
+  fi
+}
