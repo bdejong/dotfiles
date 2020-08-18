@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX=true
+
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir virtualenv vcs)
@@ -42,3 +44,9 @@ function cd() {
     . ./.env/bin/activate
   fi
 }
+
+export PATH="/usr/local/sbin:$PATH"
+
+export CLICOLOR=1
+zstyle ':completion:*:default' list-colors ''
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
